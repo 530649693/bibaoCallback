@@ -1,0 +1,6 @@
+public class MyIncrement {
+	public void increment()	{
+		System.out.println("other operation");	//输出 其他操作
+	}
+	static void f(MyIncrement mi) { mi.increment(); }
+}
