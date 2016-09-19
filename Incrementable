@@ -1,0 +1,5 @@
+//用内部类实现回调
+//接口 ‘递增的’
+public interface Incrementable {
+	void incremnet();
+}
