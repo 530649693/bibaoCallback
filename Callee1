@@ -1,0 +1,8 @@
+//一个简单的类 实现接口
+public class Callee1 implements Incrementable{
+	private int i = 0;
+	public void incremnet(){
+		i++;
+		System.out.println(i);
+	}
+}
