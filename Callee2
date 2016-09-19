@@ -1,0 +1,20 @@
+//如果你的类想要用其它的方法实现increment()  必须要用内部类
+public class Callee2 extends MyIncrement{
+	private int i = 0;
+	public void increment(){
+		super.increment();
+		i++;
+		System.out.println(i);
+	}
+	//内部类 ‘终止’
+	private class Closure implements Incrementable{
+		public void incremnet() {
+			//指定外部类方法 否则你会无限递归  infinite recursion
+			Callee2.this.increment();
+		}
+	}
+	//回调引用
+	Incrementable getCallBackReference() {
+		return new Closure();
+	}
+}
